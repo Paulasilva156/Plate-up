@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Context Menu</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .textArea {
+            width: 50%;
+            height: 50%;
+            padding: 16px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+            resize: none;
+        }
+
+        .context-menu {
+            display: none;
+            position: absolute;
+            z-index: 1000;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            padding: 8px 0;
+            font-size: 14px;
+            min-width: 100px;
+        }
+
+        .context-menu li {
+            list-style: none;
+            padding: 4px 8px;
+            cursor: pointer;
+        }
+
+        .context-menu li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+           
+    <textarea id="textArea" class = "textArea"></textarea>
+</div>
+    <ul class="context-menu">
+        <li id="copy">Copy</li>
+        <li id="paste">Paste</li>
+        <li id="cut">Cut</li>
+    </ul>
+
+</body>
+
+<script src="app.js"></script>
+
+</html>
